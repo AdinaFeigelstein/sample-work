@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Potato Head</title>
+    <link rel="icon" href="media/icon.jpg">
+</head>
+
+<style>
+    html,
+    body,
+    #sidebar,
+    #main {
+        height: 100%;
+        margin: 0;
+    }
+
+    #main {
+        width: 100%;
+        float: right;
+        background-image: url(media/background.jpg);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        overflow:hidden;
+        border: 2px solid black;
+        box-sizing: border-box;
+        
+    }
+
+    #sidebar {
+        float: left;
+        background-color: orange;
+        height: 100%;
+        width: 20%;
+        border-right: 2px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        overflow-y: auto;
+    }
+
+    #sidebar .mphPart {
+        position: relative;
+        max-width: 100%;
+        height: auto;
+    }
+    /* .mphPart{
+        max-width: 100%;
+        height: auto;
+    } */
+
+    #mph {
+        position: fixed;
+        left: 50%;
+        top: 35%;
+        z-index: 0;
+        height: auto;
+
+    }
+
+    h1 {
+        height: 60px;
+        margin: 0;
+        padding-left: 1px;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: Chalkduster, fantasy;
+        font-size: 3em;
+        font-weight: bold;
+        color: darkred;
+        letter-spacing: 5px;
+        background-color: orange;
+        border-bottom: 2px solid black;
+    }
+
+    h3 {
+        color: darkred;
+        font-size: 2em;
+        font-weight: bold;
+        border-bottom: 3px solid black;
+        margin-top: 0%;
+        margin-bottom: 1em;
+    }
+
+    button {
+        position: absolute;
+        right: 15px;
+        height: 60px;
+        width: 100px;
+
+        border-radius: 10%;
+        background-color: orange;
+    }
+
+    #sound {
+        top: 70px;
+        font-size: 1.5em;
+
+    }
+
+    #save {
+        top: 150px;
+        font-size: 18px;
+    }
+
+    #load {
+        top: 230px;
+        font-size: 18px;
+    }
+
+    #reset{
+        top: 310px;
+        font-size: 18px;
+    }
+
+    button:hover {
+        background-color: lightgray;
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+
+
+
+    <div id="main">
+        <h1>Mr. Potato Head</h1>
+        <div id="sidebar">
+            <h3>Drag to Customize!</h3>
+        </div>
+        <button id="sound">Mute</button>
+        <button id="save">Save This Potato!</button>
+        <button id="load">Load Last Potato!</button>
+        <img id="mph" height="30%" width ="20%" src="media/MPHparts/Picture1.png" alt="mph">
+
+        <iframe allow="autoplay" id="audio" style="display: none"></iframe>
+        <audio id="backgroundAudio" src="media/mainAudio.mp3" autoplay loop></audio>
+        <audio id="dragAudio" src="media/drag.mp3"></audio>
+        <audio id="dropAudio" src="media/drop.mp3"></audio>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="mph.js"></script>
+</body>
+
+</html>

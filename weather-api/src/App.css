@@ -1,5 +1,8 @@
 body {
-  background-color: lightblue;
+  background-image: url('../public/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
 }
 
 div {
@@ -11,6 +14,7 @@ div {
 #header {
   color: rebeccapurple;
   font-size: 60px;
+  margin-top: .2em;
 
 }
 
@@ -23,25 +27,36 @@ div {
   margin-top: 1em;
   font-size: 20px;
   text-align: center;
-  background-color: white;
+  background: rgb(255, 255, 255, .3);
   border-radius: 15px;
+  border: none;
 
+}
+
+#zipInput:hover{
+ background-color: white;
 }
 
 #zipButton {
   border-radius: 10px;
   height: 30px;
   width: 100px;
-  background-color: white;
+  background-color: rebeccapurple;
+  color: white;
   font-size: 15px;
+}
+#zipButton:hover{
+  background-color: gray;
 }
 
 #weather {
-  border: 3px solid black;
+  border: 1px solid black;
   border-radius: 15px;
-  margin-top: 1em;
-  width: 70%;
-  background-color: white;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  width: 50%;
+  height: 40%;
+  background: rgb(255, 255, 255, .3);
 }
 
 .icon {
@@ -51,8 +66,9 @@ div {
 
 .city {
   font-weight: bold;
-  font-size: 65px;
-  color: rebeccapurple;
+  font-size: 50px;
+  color: white;
+  margin: 0;
 }
 
 .temp {
@@ -63,6 +79,7 @@ div {
 .description {
   font-size: 30px;
   font-style: italic;
+  color: white
 }
 
 #noWeather {
