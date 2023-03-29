@@ -15,7 +15,7 @@ div {
   color: rebeccapurple;
   font-size: 60px;
   margin-top: .2em;
-
+text-shadow: 2px 1px 1px black;
 }
 
 #zipInput {
@@ -33,8 +33,8 @@ div {
 
 }
 
-#zipInput:hover{
- background-color: white;
+#zipInput:hover {
+  background-color: white;
 }
 
 #zipButton {
@@ -45,8 +45,10 @@ div {
   color: white;
   font-size: 15px;
 }
-#zipButton:hover{
+
+#zipButton:hover {
   background-color: gray;
+  cursor: pointer;
 }
 
 #weather {
@@ -54,9 +56,14 @@ div {
   border-radius: 15px;
   margin-top: 1.5em;
   margin-bottom: 1em;
+  padding-bottom: 1em;
   width: 50%;
-  height: 40%;
+  height: 29em;
+  box-sizing: border-box;
   background: rgb(255, 255, 255, .3);
+  overflow: auto;
+  position: relative;
+  box-shadow: 2px 2px 2px;
 }
 
 .icon {
@@ -68,18 +75,57 @@ div {
   font-weight: bold;
   font-size: 50px;
   color: white;
+  padding-top: .5em;
   margin: 0;
 }
 
 .temp {
   font-size: 50px;
   color: rebeccapurple;
+  margin: 0;
 }
 
 .description {
   font-size: 30px;
   font-style: italic;
-  color: white
+  color: white;
+  margin-top: 1em;
+}
+
+.infoDiv {
+  width: 90%;
+  font-size: 2em;
+  padding: .5em;
+  border-bottom: 1px solid black;
+  margin: auto;
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+.arrowButton {
+  position: absolute;
+  width: 5em;
+  height: 100%;
+  top: 0;
+  background-color: white;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0;
+  opacity: 0;
+}
+
+.arrowButton:hover {
+  opacity: .4;
+  cursor: pointer;
+}
+
+#nextButton {
+  right: 0;
+}
+
+#backButton {
+  left: 0;
 }
 
 #noWeather {
