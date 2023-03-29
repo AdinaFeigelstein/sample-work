@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    h1 {
+
+      text-align: center;
+    }
+
+    #display {
+
+      width: 55%;
+      height: 450px;
+      border: 2px solid black;
+      margin: auto;
+      margin-bottom: 2em;
+      margin-top: 2em;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #input {
+      width: 50%;
+      height: 15px;
+      margin-left: 23%;
+    }
+
+    .clientMsg {
+      padding-left: 2px;
+      padding-right: 2px;
+      margin-right: 1em;
+      margin-top: 1em;
+      max-width: 30%;
+      border: 2px solid blue;
+      align-self: flex-end;
+    }
+
+    .serverMsg {
+      padding-left: 2px;
+      padding-right: 2px;
+      margin-left: 1em;
+      margin-top: 1em;
+      max-width: 30%;
+      border: 2px solid green;
+      align-self: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>PCS Group Chat</h1>
+
+  <div id="display"></div>
+
+<form id="inputForm">
+  <input type="text" name="input" id="input">
+  <button >Send</button>
+</form>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
