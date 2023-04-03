@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Chat</title>
+
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- ------------ Join Screen -------------------- -->
+    <div class="screen join-screen active">
+        <h2 class="join-head">Enter Chat Room</h2>
+        <div class="join-form">
+          <label>Username</label>
+          <input type="text" id="username">
+          <button id="join-button">Enter chat</button>
+        </div>
+    </div>
+
+    <!-- ------------ Chat Screen -------------------- -->
+    <div class="screen chat-screen">
+      <div class="chat-header">
+        <div class="logo">Chat</div>
+        <button id="exit">Exit</button>
+      </div>
+
+      <div id="display"></div>
+
+      <form id="chat-form">
+        <input type="text" name="message" id="message">
+        <button id="send">Send</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
