@@ -9,6 +9,8 @@
 
   const socket = io();
 
+
+  //Save username when enter chat and send to server
   document.querySelector('#join-button').addEventListener('click', () => {
     username = usernameInput.value;
     if (username.length == 0) {
@@ -19,6 +21,8 @@
     document.querySelector('.chat-screen').classList.add('active');
   });
 
+
+  //when send message, create a message and send to server
   input.addEventListener('submit', e => {
     e.preventDefault();
     let msg = messageInput.value;
@@ -37,11 +41,15 @@
     messageInput.value = "";
   });
 
+
+  //exit button handler
   document.querySelector('#exit').addEventListener('click', () => {
     socket.emit('exitUser', username);
     window.location.href = window.location.href;
   });
 
+
+  //what to do with server messages
   socket.on('update', update => {
     createMessage('update', update);
   });
@@ -50,16 +58,18 @@
     createMessage('other', chat);
   });
 
+
+  //function to create messages
   function createMessage(type, message) {
     if (type == 'my') {
       const el = document.createElement('div');
       el.innerText = `You: ${message.text}`;
-      el.className = "myMsg";
+      el.className = "msg myMsg";
       display.append(el);
     } else if (type == 'other') {
       const el = document.createElement('div');
       el.innerText = `${message.username}: ${message.text}`;
-      el.className = "otherMsg";
+      el.className = "msg otherMsg";
       display.append(el);
     } else if (type == 'update') {
       const el = document.createElement('div');
