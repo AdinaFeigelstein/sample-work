@@ -5,8 +5,8 @@
 
   const canvas = document.querySelector('#theCanvas');
   function resizeCanvas() {
-    canvas.width = (window.innerWidth - 2) - ((window.innerWidth - 2) % CELL_SIZE);
-    canvas.height = (window.innerHeight - 2) - ((window.innerHeight - 2) % CELL_SIZE);
+    canvas.width = (window.innerWidth - 300) - ((window.innerWidth - 300) % CELL_SIZE);
+    canvas.height = (window.innerHeight - 100) - ((window.innerHeight - 100) % CELL_SIZE);
   }
   window.addEventListener('resize', resizeCanvas);
   resizeCanvas();

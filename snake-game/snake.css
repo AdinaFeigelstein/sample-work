@@ -3,7 +3,6 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: lightpink;
 }
 
 body {
@@ -15,8 +14,10 @@ body {
 
 #theCanvas {
   display: block;
-  border: 5px solid black;
+  border: 7px solid black;
   margin-right: 0;
+  margin: auto;
+
 }
 
 #pause {
