@@ -26,6 +26,12 @@ body {
   gap: .25rem;
 }
 
+@media (max-width: 576px) {
+  .calculator-container{
+    grid-template-columns: repeat(4, 5rem);
+  }
+  
+}
 .calculator-grid button {
   cursor: pointer;
   font-size: 2rem;
